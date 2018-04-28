@@ -45,6 +45,12 @@ function getCookie(cname) {
 
 function printCookie(a) {
 
-    var user = "Welcome, " + getCookie("user");
-    document.getElementById(a).innerHTML = user;
+    var user = getCookie("user");
+    if (user != "") {
+        var msg = "Welcome, " + user;
+        document.getElementById(a).innerHTML = msg;
+    }
+    else {
+        document.getElementById(a).innerHTML = "Cookie not set";
+    }
 }
