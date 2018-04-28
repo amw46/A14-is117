@@ -52,8 +52,24 @@
     <div class="starter-template">
         <h1>Hello, world!</h1>
         <h1>Assignment 14: Cookies</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
     </div>
+
+    <div>
+        <form name="myform" onsubmit="validateForm(myform)">
+            <input class="form-control mr-sm-2" type="text" placeholder="Name" aria-label="Name">
+            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Submit</button>
+        </form>
+
+        <h2 id="namedisplay">
+            <script>
+                printCookie(namedisplay);
+            </script>
+
+        </h2>
+
+    </div>
+
+
 
 </main><!-- /.container -->
 
@@ -64,6 +80,7 @@
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="scripts/cookies.js"></script>
 
 </body>
 </html>
