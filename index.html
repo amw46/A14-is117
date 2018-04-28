@@ -54,18 +54,19 @@
         <h1>Assignment 14: Cookies</h1>
     </div>
 
+    <script>
+        var cookieVal = document.forms["myForm"]["fname"].value;
+        setCookie("user", cookieVal, 7);
+    </script>
+
     <div>
-        <form name="myform" onsubmit="validateForm('myform')" class="form-inline justify-content-center">
-            <input class="form-control mr-sm-2" type="text" placeholder="Name" aria-label="Name">
-            <button class="btn btn-outline-primary" type="submit">Submit</button>
+        <form name="myForm" onsubmit="return validateForm()" class="form-inline justify-content-center">
+            <input id="fname" class="form-control mr-sm-2" type="text" placeholder="Name" aria-label="Name">
+            <button class="btn btn-outline-primary" type="submit" onclick="printCookie()">Submit</button>
         </form>
 
-        <h2 id="namedisplay">
-            <script>
-                printCookie("namedisplay");
-            </script>
 
-        </h2>
+        <h2 id="namedisplay"></h2>
 
     </div>
 

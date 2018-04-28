@@ -1,14 +1,10 @@
-function validateForm(a) {
-    var fname = document.forms[a]["fname"].value;
+function validateForm() {
+    var fname = document.forms["myForm"]["fname"].value;
     if (fname == "") {
         alert("Name must be filled out");
         return false;
     }
 
-    var cookieVal = document.forms[a]["fname"].value;
-    setCookie("user", cookieVal, 7);
-
-    return true;
 }
 
 
@@ -43,14 +39,26 @@ function getCookie(cname) {
 }
 
 
-function printCookie(a) {
+
+function printCookie() {
 
     var user = getCookie("user");
     if (user != "") {
-        var msg = "Welcome, " + user;
-        document.getElementById(a).innerHTML = msg;
+        var msg = "Welcome back, " + user;
+        document.getElementById("namedisplay").innerHTML = msg;
     }
     else {
-        document.getElementById(a).innerHTML = "Cookie not set";
+        document.getElementById("namedisplay").innerHTML = "Cookie not set";
+    }
+}
+
+function cookieAlert() {
+
+    var user = getCookie("user");
+    if (user != "") {
+        alert("Welcome back, " + user);
+    }
+    else {
+        //document.getElementById("namedisplay").innerHTML = "Cookie not set";
     }
 }
