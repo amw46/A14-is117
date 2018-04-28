@@ -5,7 +5,6 @@ function validateForm() {
         return false;
     }
 
-    setCookie("user", fname, 7);
 
 }
 
@@ -16,8 +15,9 @@ function setCookie(cname, cval, daysToExpire) {
     date.setTime(date.getTime() + (daysToExpire*24*60*60*1000)); //milliseconds
     var expires = date.toUTCString();
 
-    document.cookie = cname + "=" + cval + ";" + "expires=" + expires + ";";
+    document.cookie = cname + "=" + cval + ";" + "expires=" + expires + ";path= /;";
     // cname=cvalue; expires=expiredate; path=/
+
 
 }
 
