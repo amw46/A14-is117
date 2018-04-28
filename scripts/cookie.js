@@ -1,12 +1,11 @@
 function validateForm() {
     var fname = document.forms["myForm"]["fname"].value;
     if (fname == "") {
-        alert("Name must be filled out");
+        window.alert("Name must be filled out");
         return false;
     }
 
 }
-
 
 
 function setCookie(cname, cval, daysToExpire) {
@@ -39,7 +38,7 @@ function getCookie(cname) {
 }
 
 
-
+/*
 function printCookie() {
 
     var user = getCookie("user");
@@ -51,14 +50,17 @@ function printCookie() {
         document.getElementById("namedisplay").innerHTML = "Cookie not set";
     }
 }
+*/
 
 function cookieAlert() {
 
     var user = getCookie("user");
     if (user != "") {
-        alert("Welcome back, " + user);
+        window.alert("Welcome back, " + user);
     }
     else {
-        //document.getElementById("namedisplay").innerHTML = "Cookie not set";
-    }
+        user = window.prompt("Please enter your name:","");
+        if (user != "" && user != null) {
+            setCookie("username", user, 30);
+        }
 }

@@ -11,7 +11,7 @@
     <link href="css/starter-template.css" rel="stylesheet">
 
 </head>
-<body>
+<body onload="cookieAlert()">
 
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
     <a class="navbar-brand" href="#">Navbar</a>
@@ -54,23 +54,18 @@
         <h1>Assignment 14: Cookies</h1>
     </div>
 
-    <script>
-        var cookieVal = document.forms["myForm"]["fname"].value;
-        setCookie("user", cookieVal, 7);
-    </script>
 
     <div>
-        <form name="myForm" onsubmit="return validateForm()" class="form-inline justify-content-center">
+        <form name="myForm" onsubmit='validateForm()' class="form-inline justify-content-center">
             <input id="fname" class="form-control mr-sm-2" type="text" placeholder="Name" aria-label="Name">
-            <button class="btn btn-outline-primary" type="submit" onclick="printCookie()">Submit</button>
+            <button onclick='setCookie("user", "Hi",7)' class="btn btn-outline-primary" type="submit">Submit</button>
         </form>
 
 
-        <h2 id="namedisplay"></h2>
+        <p id="nameDisplay" class="text-center my-3"></p>
+
 
     </div>
-
-
 
 </main><!-- /.container -->
 
@@ -78,10 +73,11 @@
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="scripts/cookie.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script src="scripts/cookies.js"></script>
+
 
 </body>
 </html>
