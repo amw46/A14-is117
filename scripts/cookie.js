@@ -5,6 +5,8 @@ function validateForm() {
         return false;
     }
 
+    setCookie("user", fname, 7);
+
 }
 
 
@@ -14,7 +16,7 @@ function setCookie(cname, cval, daysToExpire) {
     date.setTime(date.getTime() + (daysToExpire*24*60*60*1000)); //milliseconds
     var expires = date.toUTCString();
 
-    document.cookie = cname + "=" + cval + ";" + "expires=" + expires + ";path=/";
+    document.cookie = cname + "=" + cval + ";" + "expires=" + expires + ";";
     // cname=cvalue; expires=expiredate; path=/
 
 }
@@ -38,19 +40,19 @@ function getCookie(cname) {
 }
 
 
-/*
+
 function printCookie() {
 
     var user = getCookie("user");
     if (user != "") {
         var msg = "Welcome back, " + user;
-        document.getElementById("namedisplay").innerHTML = msg;
+        document.getElementById("nameDisplay").innerHTML = msg;
     }
     else {
-        document.getElementById("namedisplay").innerHTML = "Cookie not set";
+        document.getElementById("nameDisplay").innerHTML = "Cookie not set";
     }
 }
-*/
+
 
 function cookieAlert() {
 
