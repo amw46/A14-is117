@@ -59,8 +59,9 @@ function cookieAlert() {
         window.alert("Welcome back, " + user);
     }
     else {
-        user = window.prompt("Please enter your name:","");
+        user = window.prompt("Please enter your name:", "");
         if (user != "" && user != null) {
-            setCookie("username", user, 30);
+            setCookie("user", user, 7);
         }
+    }
 }
